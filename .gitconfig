@@ -1,0 +1,12 @@
+[user]
+	name = Jan Sandbrink
+	email = jan.sandbrink@kaeuferportal.de
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+[rerere]
+	enabled = true
+[alias]
+  co = checkout
