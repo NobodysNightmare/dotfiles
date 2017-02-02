@@ -10,3 +10,7 @@
 	enabled = true
 [alias]
   co = checkout
+[url "git@codevault.io:"]
+	insteadOf = https://codevault.io/
+[help]
+	autocorrect = 30
