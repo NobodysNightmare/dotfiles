@@ -140,3 +140,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINT=1
 source ~/.git-completion.sh
 export PROMPT_COMMAND='__git_ps1 "\[\e[2m\]\A\[\e(B\e[m\] \w" "\\\$ "'
+
+[ -f ~/.secret-env.sh ] && source ~/.secret-env.sh
+[ -f /home/jan/.travis/travis.sh ] && source /home/jan/.travis/travis.sh
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
