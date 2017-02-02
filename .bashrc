@@ -131,7 +131,7 @@ alias connect='~/development/kaeuferportal/deployment/deploy_app.sh connect'
 
 
 export PROMPT_DIRTRIM=2
-export CDPATH=.:~/development/kaeuferportal:$GOPATH/src/codevault.io/go_projects
+export CDPATH=.:~/development/kaeuferportal:$GOPATH/src/codevault.io/go_projects:~/development/operations
 
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
