@@ -10,6 +10,7 @@
 	enabled = true
 [alias]
   co = checkout
+  cr = rebase --continue
 [url "git@codevault.io:"]
 	insteadOf = https://codevault.io/
 [help]
