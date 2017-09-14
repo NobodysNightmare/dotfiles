@@ -11,6 +11,7 @@
 [alias]
   co = checkout
   cr = rebase --continue
+  pf = push --force-with-lease
 [url "git@codevault.io:"]
 	insteadOf = https://codevault.io/
 [help]
