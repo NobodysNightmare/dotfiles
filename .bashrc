@@ -128,10 +128,10 @@ alias gti='git'
 alias rubopush='rubocop && git push'
 alias deploy='~/development/kaeuferportal/deployment/deploy_app.sh deploy'
 alias connect='~/development/kaeuferportal/deployment/deploy_app.sh connect'
-
+alias bundle-audit-fix='~/development/kaeuferportal/command_line_tools_kp/bin/bundle-audit-fix'
 
 export PROMPT_DIRTRIM=2
-export CDPATH=.:~/development/kaeuferportal:$GOPATH/src/codevault.io/go_projects:~/development/operations
+export CDPATH=.:~/development/kaeuferportal:~/development/core:$GOPATH/src/codevault.io/go_projects:~/development/operations
 
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -142,3 +142,7 @@ source ~/.git-completion.sh
 export PROMPT_COMMAND='__git_ps1 "\[\e[2m\]\A\[\e(B\e[m\] \w" "\\\$ "'
 
 [ -f /home/jan/.travis/travis.sh ] && source /home/jan/.travis/travis.sh
+
+export NVM_DIR="/home/jan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=~/.npm-global/bin:$PATH
