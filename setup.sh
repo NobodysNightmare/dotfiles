@@ -4,7 +4,6 @@ set -e
 export DOTFILES=`dirname "$0"`
 export DOTFILES=`readlink -f "$DOTFILES"`
 
-# rbenv
 if [ ! -d "$HOME/.rbenv" ]; then
   echo "Installing RVM..."
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -26,3 +25,8 @@ link_file ".gemrc"
 link_file ".gitconfig"
 link_file ".gitignore"
 link_file ".vimrc"
+
+if [ ! -e "$HOME/.git-completion.sh" ]; then
+  echo "Downloading git completion..."
+  wget -O "$HOME/.git-completion.sh" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+fi
