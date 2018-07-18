@@ -141,8 +141,8 @@ export GIT_PS1_SHOWCOLORHINT=1
 source ~/.git-completion.sh
 export PROMPT_COMMAND='__git_ps1 "\[\e[2m\]\A\[\e(B\e[m\] \w" "\\\$ "'
 
-[ -f /home/jan/.travis/travis.sh ] && source /home/jan/.travis/travis.sh
+[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
 
-export NVM_DIR="/home/jan/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH=~/.npm-global/bin:$PATH
