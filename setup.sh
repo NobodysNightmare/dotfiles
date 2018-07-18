@@ -5,7 +5,7 @@ export DOTFILES=`dirname "$0"`
 export DOTFILES=`readlink -f "$DOTFILES"`
 
 if [ ! -d "$HOME/.rbenv" ]; then
-  echo "Installing RVM..."
+  echo "Installing rbenv..."
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   cd ~/.rbenv && src/configure && make -C src
   mkdir -p ~/.rbenv/plugins
