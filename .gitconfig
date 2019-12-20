@@ -1,6 +1,6 @@
 [user]
 	name = Jan Sandbrink
-	email = jan.sandbrink@kaeuferportal.de
+	email = nobodysnightmare@gmail.com
 [push]
 	default = simple
 [core]
@@ -16,3 +16,10 @@
 	insteadOf = https://codevault.io/
 [help]
 	autocorrect = 30
+[commit]
+	verbose = true
+
+[includeIf "gitdir:~/development/aroundhome/"]
+  path = ~/.dotfiles/gitconfig/aroundhome
+[includeIf "gitdir:~/development/private/"]
+  path = ~/.dotfiles/gitconfig/private

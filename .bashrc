@@ -88,7 +88,10 @@ alias server='bin/server'
 
 export AWS_PROFILE=legacy
 export PROMPT_DIRTRIM=2
-export CDPATH=.:~/development/kaeuferportal:~/development/hub:$GOPATH/src/codevault.io/go_projects:~/development/operations
+
+aroundhome_dirs=$(ls -d /home/jan/development/aroundhome/* | tr '\n' ':' | sed 's/.$//')
+private_dirs=/home/jan/development/private
+export CDPATH=".:$aroundhome_dirs:$private_dirs"
 
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
