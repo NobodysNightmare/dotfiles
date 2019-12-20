@@ -4,6 +4,12 @@ set -e
 export DOTFILES=`dirname "$0"`
 export DOTFILES=`readlink -f "$DOTFILES"`
 
+if [ ! -L "$HOME/.dotfiles" ]; then
+  echo "Creating symlink for dotfiles folder..."
+  [ -e "$HOME/.dotfiles" ] && rm "$HOME/.dotfiles"
+  ln -s "$DOTFILES" "$HOME/.dotfiles"
+fi
+
 if [ ! -d "$HOME/.rbenv" ]; then
   echo "Installing rbenv..."
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
