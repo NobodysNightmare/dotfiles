@@ -85,6 +85,7 @@ alias bundle-audit-fix='~/development/kaeuferportal/command_line_tools_kp/bin/bu
 alias codegrep='grep -r --exclude *.log --exclude-dir .idea --exclude-dir .git --exclude-dir coverage'
 
 alias server='bin/server'
+alias tt='timetrap display -f quota'
 
 export AWS_PROFILE=legacy
 export PROMPT_DIRTRIM=2
