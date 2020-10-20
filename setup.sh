@@ -30,6 +30,7 @@ function link_file {
 
 link_file ".bashrc"
 link_file ".gemrc"
+link_file ".gitattributes"
 link_file ".gitconfig"
 link_file ".gitignore"
 link_file ".vimrc"

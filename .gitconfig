@@ -4,6 +4,7 @@
 [push]
 	default = simple
 [core]
+	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	editor = nano
@@ -26,3 +27,5 @@
   path = ~/.dotfiles/gitconfig/private
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
