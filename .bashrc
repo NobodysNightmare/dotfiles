@@ -78,12 +78,12 @@ export PATH="~/.dotfiles/bin:$PATH"
 
 alias be='bundle exec'
 alias gti='git'
-alias deploy='~/development/kaeuferportal/deployment/deploy_app.sh deploy'
-alias connect='~/development/kaeuferportal/deployment/deploy_app.sh connect'
-alias bundle-audit-fix='~/development/kaeuferportal/command_line_tools_kp/bin/bundle-audit-fix'
+alias bundle-audit-fix='~/development/aroundhome/kaeuferportal/command_line_tools_kp/bin/bundle-audit-fix'
 
-alias codegrep='grep -r --exclude *.log --exclude-dir .idea --exclude-dir .git --exclude-dir coverage'
+alias codegrep='grep -r --exclude *.log --exclude-dir .idea --exclude-dir .git --exclude-dir tmp --exclude-dir coverage'
 
+alias rd='docker-compose run --rm development'
+alias rt='docker-compose run --rm test'
 alias server='bin/server'
 alias tt='timetrap display -f quota'
 
