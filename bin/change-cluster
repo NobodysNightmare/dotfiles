@@ -1,0 +1,24 @@
+#!/bin/bash
+
+script_name=$( basename ${0#-} ) #- needed if sourced no path
+this_script=$( basename ${BASH_SOURCE} )
+
+if [[ ${script_name} = ${this_script} ]] ; then
+    echo "Remember that you need to source this script."
+    echo "You can't execute it directly."
+    echo
+    echo "  . change-cluster staging"
+
+    exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Please specify an environment. E.g."
+  echo
+  echo "  . change-cluster staging"
+
+  return
+fi
+
+export AWS_PROFILE=$1
+aws eks update-kubeconfig --name $1 --region eu-central-1
