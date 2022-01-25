@@ -1,0 +1,19 @@
+add_newline = true
+
+[directory]
+truncation_length = 2
+truncate_to_repo = false
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%H:%M'
+
+[aws.region_aliases]
+eu-central-1 = 'euc1'
+
+[nodejs]
+disabled = true
+
+[ruby]
+version_format = '${major}.${minor}'

@@ -100,7 +100,9 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINT=1
 source ~/.git-completion.sh
-export PROMPT_COMMAND='__git_ps1 "\[\e[2m\]\A\[\e(B\e[m\] \w" "\\\$ "; echo -ne "\033]0;$(pwd | rev | cut -d "/" -f 1 | rev) @${HOSTNAME}\007"'
+
+export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+eval "$(starship init bash)"
 
 [ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
 

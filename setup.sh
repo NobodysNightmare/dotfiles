@@ -39,3 +39,8 @@ if [ ! -e "$HOME/.git-completion.sh" ]; then
   echo "Downloading git completion..."
   wget -O "$HOME/.git-completion.sh" https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 fi
+
+if [ -z "$(which starship)" ]; then
+  echo "Installing starship..."
+  sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
+fi
