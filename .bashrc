@@ -67,6 +67,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+. ~/.dotfiles/switch-aws-role.sh
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
