@@ -1,0 +1,22 @@
+#!/home/jan/.rbenv/shims/ruby
+
+if ARGV.size != 3
+  puts 'Usage: worklog <iso-date> <project-hours> <other-hours>'
+  puts 'Example: worklog 2022-01-01 7.5 0.5'
+
+  exit(1)
+end
+
+date, work, other = ARGV
+time = "#{date}T08:00:00.000+0200"
+
+work = Float(work)
+other = Float(other)
+
+if work > 0
+  puts `jira worklog add --comment=1 --time-spent=#{work}h --started="#{time}" --noedit TP-279`
+end
+
+if other > 0
+  puts `jira worklog add --comment=3 --time-spent=#{other}h --started="#{time}" --noedit PTI-2`
+end
