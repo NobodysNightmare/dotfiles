@@ -1,13 +1,16 @@
 #!/home/jan/.rbenv/shims/ruby
 
-if ARGV.size != 3
-  puts 'Usage: worklog <iso-date> <project-hours> <other-hours>'
-  puts 'Example: worklog 2022-01-01 7.5 0.5'
+require 'date'
+
+if ARGV.size < 2 || ARGV.size > 3
+  puts 'Usage: worklog <project-hours> <other-hours> [<iso-date>]'
+  puts 'Example: worklog 7.5 0.5 2022-01-01'
 
   exit(1)
 end
 
-date, work, other = ARGV
+work, other, date = ARGV
+date = Date.today.iso8601 if date.nil?
 time = "#{date}T08:00:00.000+0200"
 
 work = Float(work)
