@@ -2,24 +2,27 @@
 
 require 'date'
 
-if ARGV.size < 2 || ARGV.size > 3
-  puts 'Usage: worklog <project-hours> <other-hours> [<iso-date>]'
-  puts 'Example: worklog 7.5 0.5 2022-01-01'
+if ARGV.size < 1
+  puts 'Usage: worklog (issue:hours:type)+ [<iso-date>]'
+  puts 'Example: worklog FOO-42:7.5:1 2022-01-01'
 
   exit(1)
 end
 
-work, other, date = ARGV
-date = Date.today.iso8601 if date.nil?
+args = ARGV.dup
+date = Date.today.iso8601
+date = args.pop unless args.last.include? ':'
 time = "#{date}T08:00:00.000+0200"
 
-work = Float(work)
-other = Float(other)
+puts "All times will be logged at #{date}"
+puts
 
-if work > 0
-  puts `jira worklog add --comment=1 --time-spent=#{work}h --started="#{time}" --noedit TP-279`
-end
-
-if other > 0
-  puts `jira worklog add --comment=3 --time-spent=#{other}h --started="#{time}" --noedit PTI-2`
+args.map { |a| a.split(':') }.each do |issue, duration, type|
+  if type.nil?
+    puts "Please provide a triplet of issue:hours:type (separated by a colon) for each booking!"
+    next
+  end
+  duration = Float(duration)
+  puts "Logging #{duration}h at #{issue} (Type: #{type})"
+  puts `jira worklog add --comment=#{type} --time-spent=#{duration}h --started="#{time}" --noedit #{issue}`
 end

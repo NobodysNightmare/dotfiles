@@ -3,6 +3,7 @@
 	email = nobodysnightmare@gmail.com
 [push]
 	default = simple
+	autoSetupRemote = true
 [core]
 	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
@@ -31,3 +32,5 @@
 	ff = only
 [fetch]
 	prune = true
+[rebase]
+	autosquash = true

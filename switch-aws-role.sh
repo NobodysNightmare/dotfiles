@@ -5,6 +5,12 @@ function switch-aws-role () {
 
   export AWS_PROFILE=$envname
 
+  if [[ "$envname" == "" ]]; then
+    kubectl config unset current-context
+    echo "Unset Kubernetes context"
+    return
+  fi
+
   aws sts get-caller-identity
 
   echo "Please provide the wished cluster name or type one of the following options:"
