@@ -1,5 +1,5 @@
 [user]
 	email = jan.sandbrink@aroundhome.de
-	signingkey = 09A64A57
+	signingkey = F031A178B7CE6BC0
 [commit]
 	gpgsign = true
