@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "Default Light+",
+    "terminal.integrated.rendererType": "dom",
+    "files.autoSave": "off",
+    "editor.selectionClipboard": false,
+    "redhat.telemetry.enabled": false,
+    "files.insertFinalNewline": true,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "extensions.ignoreRecommendations": true
+}
