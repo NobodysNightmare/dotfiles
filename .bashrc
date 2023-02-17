@@ -91,8 +91,8 @@ alias tt='timetrap display -f quota'
 
 export PROMPT_DIRTRIM=2
 
-aroundhome_dirs=$(ls -d /home/jan/development/aroundhome/* | tr '\n' ':' | sed 's/.$//')
-private_dirs=/home/jan/development/private
+aroundhome_dirs=$(ls -d $HOME/development/aroundhome/* | tr '\n' ':' | sed 's/.$//')
+private_dirs=$HOME/development/private
 export CDPATH=".:$aroundhome_dirs:$private_dirs"
 
 export GIT_PS1_SHOWCOLORHINTS=1
@@ -104,10 +104,3 @@ source ~/.git-completion.sh
 
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 eval "$(starship init bash)"
-
-[ -f "$HOME/.travis/travis.sh" ] && source "$HOME/.travis/travis.sh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export PATH=~/.npm-global/bin:$PATH
-nvm use --silent
