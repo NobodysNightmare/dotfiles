@@ -20,7 +20,7 @@ if [ ! -d "$HOME/.rbenv" ]; then
   git clone https://github.com/rbenv/rbenv-each.git ~/.rbenv/plugins/rbenv-each
 fi
 
-function link_file {
+function link_simple {
   if [ ! -L "$HOME/$1" ]; then
     echo "Creating $1..."
     [ -e "$HOME/$1" ] && rm "$HOME/$1"
@@ -28,12 +28,28 @@ function link_file {
   fi
 }
 
-link_file ".bashrc"
-link_file ".gemrc"
-link_file ".gitattributes"
-link_file ".gitconfig"
-link_file ".gitignore"
-link_file ".vimrc"
+function link_src_dest {
+  SRC=$1
+  DEST=$2
+
+  if [ ! -L "$DEST" ]; then
+    echo "Creating $DEST..."
+    [ -e "$DEST" ] && rm "$DEST"
+
+    mkdir -p $(dirname $DEST)
+    ln -s "$DOTFILES/$SRC" "$DEST"
+  fi
+}
+
+link_simple ".bashrc"
+link_simple ".gemrc"
+link_simple ".gitattributes"
+link_simple ".gitconfig"
+link_simple ".gitignore"
+link_simple ".vimrc"
+
+link_src_dest "vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+link_src_dest "vscode/snippets" "$HOME/.config/Code/User/snippets"
 
 if [ ! -e "$HOME/.git-completion.sh" ]; then
   echo "Downloading git completion..."
