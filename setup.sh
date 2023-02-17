@@ -42,5 +42,5 @@ fi
 
 if [ -z "$(which starship)" ]; then
   echo "Installing starship..."
-  sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
+  sudo snap install starship
 fi
