@@ -1,4 +1,6 @@
-#!/home/jan/.rbenv/shims/ruby
+#!/home/jansandbrink/.rbenv/shims/ruby
+
+# Based on https://github.com/go-jira/jira
 
 require 'date'
 
