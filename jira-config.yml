@@ -1,0 +1,3 @@
+endpoint: https://aroundhome.atlassian.net
+user: jan.sandbrink@aroundhome.de
+password-source: keyring
