@@ -91,9 +91,9 @@ alias tt='timetrap display -f quota'
 
 export PROMPT_DIRTRIM=2
 
-aroundhome_dirs=$(ls -d $HOME/development/aroundhome/* | tr '\n' ':' | sed 's/.$//')
-private_dirs=$HOME/development/private
-export CDPATH=".:$aroundhome_dirs:$private_dirs"
+aroundhome_dir=$HOME/development/aroundhome
+private_dir=$HOME/development/private
+export CDPATH=".:$aroundhome_dir:$private_dir"
 
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWDIRTYSTATE=1
