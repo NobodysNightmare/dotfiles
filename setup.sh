@@ -61,3 +61,9 @@ if [ -z "$(which starship)" ]; then
   echo "Installing starship..."
   sudo snap install starship
 fi
+
+if [ ! -d "$HOME/.fzf" ]; then
+  echo "Installing Fuzzyfind..."
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+fi

@@ -104,3 +104,5 @@ source ~/.git-completion.sh
 
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
