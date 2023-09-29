@@ -73,8 +73,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 source "$HOME/.asdf/asdf.sh"
 
-export PATH=$PATH:/usr/local/go/bin
+export GOPRIVATE=codevault.io
 export GOPATH="$HOME/go"
+
+export PATH=$PATH:/usr/local/go/bin
 export PATH="$GOPATH/bin:$PATH"
 
 export PATH="~/.dotfiles/bin:$PATH"
