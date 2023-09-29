@@ -71,6 +71,7 @@ fi
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+source "$HOME/.asdf/asdf.sh"
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go"

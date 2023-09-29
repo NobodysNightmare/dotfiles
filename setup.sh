@@ -20,6 +20,12 @@ if [ ! -d "$HOME/.rbenv" ]; then
   git clone https://github.com/rbenv/rbenv-each.git ~/.rbenv/plugins/rbenv-each
 fi
 
+if [ ! -d "$HOME/.asdf" ]; then
+  echo "Installing asdf..."
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+
+fi
+
 function link_simple {
   if [ ! -L "$HOME/$1" ]; then
     echo "Creating $1..."
