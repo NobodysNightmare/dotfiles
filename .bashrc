@@ -92,17 +92,12 @@ alias rt='docker compose run --rm test'
 alias server='docker compose up development'
 alias tt='timetrap display -f quota'
 
-export PROMPT_DIRTRIM=2
-
 aroundhome_dir=$HOME/development/aroundhome
 private_dir=$HOME/development/private
 export CDPATH=".:$aroundhome_dir:$private_dir"
 
-export GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWCOLORHINT=1
+export KUBE_EDITOR=nano
+
 source ~/.git-completion.sh
 
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
