@@ -19,7 +19,7 @@
 [url "git@codevault.io:"]
 	insteadOf = https://codevault.io/
 [help]
-	autocorrect = 30
+	autocorrect = prompt
 [commit]
 	verbose = true
 
@@ -35,3 +35,5 @@
 	prune = true
 [rebase]
 	autosquash = true
+[diff]
+	algorithm = histogram
