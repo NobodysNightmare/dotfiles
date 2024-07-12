@@ -57,6 +57,8 @@ link_simple ".vimrc"
 link_src_dest "jira-config.yml" "$HOME/.jira.d/config.yml"
 link_src_dest "vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 link_src_dest "vscode/snippets" "$HOME/.config/Code/User/snippets"
+link_src_dest "i3-config" "$HOME/.config/i3/config"
+link_src_dest "dunstrc" "$HOME/.config/dunst/dunstrc"
 
 if [ ! -e "$HOME/.git-completion.sh" ]; then
   echo "Downloading git completion..."
