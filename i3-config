@@ -34,6 +34,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+for_window [all] title_window_icon padding 3px
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -125,7 +127,14 @@ set $ws9 "9"
 set $ws10 "10"
 
 workspace $ws2 output DP-1-1
+workspace $ws4 output DP-1-1
+workspace $ws6 output DP-1-1
+workspace $ws8 output DP-1-1
+workspace $ws10 output DP-1-1
 workspace $ws3 output DP-1-2
+workspace $ws5 output DP-1-2
+workspace $ws7 output DP-1-2
+workspace $ws9 output DP-1-2
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
