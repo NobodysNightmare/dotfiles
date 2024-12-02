@@ -16,15 +16,13 @@
   cr = rebase --continue
   pf = push --force-with-lease
 	sw = switch
-[url "git@codevault.io:"]
-	insteadOf = https://codevault.io/
 [help]
 	autocorrect = prompt
 [commit]
 	verbose = true
 
-[includeIf "gitdir:~/development/aroundhome/"]
-  path = ~/.dotfiles/gitconfig/aroundhome
+[includeIf "gitdir:~/development/work/"]
+  path = ~/.dotfiles/gitconfig/work
 [includeIf "gitdir:~/development/private/"]
   path = ~/.dotfiles/gitconfig/private
 [init]

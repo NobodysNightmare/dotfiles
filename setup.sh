@@ -10,6 +10,14 @@ if [ ! -L "$HOME/.dotfiles" ]; then
   ln -s "$DOTFILES" "$HOME/.dotfiles"
 fi
 
+if [ -z "$(which make)" ]; then
+  sudo apt install make
+fi
+
+if [ -z "$(which curl)" ]; then
+  sudo apt install curl
+fi
+
 if [ ! -d "$HOME/.rbenv" ]; then
   echo "Installing rbenv..."
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -67,7 +75,7 @@ fi
 
 if [ -z "$(which starship)" ]; then
   echo "Installing starship..."
-  sudo snap install starship
+  curl -sS https://starship.rs/install.sh | sh
 fi
 
 if [ ! -d "$HOME/.fzf" ]; then

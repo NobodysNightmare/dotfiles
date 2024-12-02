@@ -73,7 +73,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 source "$HOME/.asdf/asdf.sh"
 
-export GOPRIVATE=codevault.io
 export GOPATH="$HOME/go"
 
 export PATH=$PATH:/usr/local/go/bin
@@ -83,7 +82,6 @@ export PATH="~/.dotfiles/bin:$PATH"
 
 alias be='bundle exec'
 alias gti='git'
-alias bundle-audit-fix='~/development/aroundhome/kaeuferportal/command_line_tools_kp/bin/bundle-audit-fix'
 alias codegrep='grep -r --exclude *.log --exclude-dir .idea --exclude-dir .git --exclude-dir node_modules --exclude-dir tmp --exclude-dir coverage'
 
 alias docker-compose='docker compose'
@@ -92,9 +90,9 @@ alias rt='docker compose run --rm test'
 alias server='docker compose up development'
 alias tt='timetrap display -f quota'
 
-aroundhome_dir=$HOME/development/aroundhome
+work_dir=$HOME/development/work
 private_dir=$HOME/development/private
-export CDPATH=".:$aroundhome_dir:$private_dir"
+export CDPATH=".:$work_dir:$private_dir"
 
 export KUBE_EDITOR=nano
 

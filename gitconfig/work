@@ -1,0 +1,5 @@
+[user]
+	email = j.sandbrink@openproject.com
+	signingkey = D99E2DE7C266137663DFA2BFD15CDBF0D2C88AAA
+[commit]
+	gpgsign = true
