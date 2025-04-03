@@ -13,5 +13,7 @@
     "hexeditor.showDecodedText": true,
     "hexeditor.defaultEndianness": "little",
     "hexeditor.inspectorType": "aside",
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "chat.commandCenter.enabled": false,
+    "editor.renderWhitespace": "none"
 }

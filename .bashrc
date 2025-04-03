@@ -84,10 +84,9 @@ alias be='bundle exec'
 alias gti='git'
 alias codegrep='grep -r --exclude *.log --exclude-dir .idea --exclude-dir .git --exclude-dir node_modules --exclude-dir tmp --exclude-dir coverage'
 
-alias docker-compose='docker compose'
-alias rd='docker compose run --rm development'
-alias rt='docker compose run --rm test'
-alias server='docker compose up development'
+alias server='docker compose up frontend'
+alias rd='docker compose run --rm worker'
+alias rt='docker compose run --rm backend-test'
 alias tt='timetrap display -f quota'
 
 work_dir=$HOME/development/work

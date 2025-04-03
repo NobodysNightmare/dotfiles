@@ -32,5 +32,9 @@
 			"  $0",
 			"end"
 		]
+	},
+	"frozen string literal comment": {
+		"prefix": "frozen",
+		"body": "# frozen_string_literal: true"
 	}
 }
