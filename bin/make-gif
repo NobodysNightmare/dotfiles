@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+ffmpeg -i $1 -loop 0 -vf "split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" $2
